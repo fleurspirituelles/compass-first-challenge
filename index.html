@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="/logomarca.png" alt="">
+      <h1>Blog</h1>
+    </header>
+
+    <section>
+      <h2>User Posts</h2>
+      <div class="row" id="postsContainer"></div>
+    </section>
+
+    <template id="postTemplate">
+      <section class="postSection">
+        <img class="postImage" src="" alt="">
+        <h3 class="postTitle"></h3>
+        <p class="postContent"></p>
+        <a href="http://" class="expandLink">Expand...</a>
+      </section>
+    </template>
+  </body>
+
+</html>
