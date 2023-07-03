@@ -2,52 +2,21 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/posts.css" />
+    <link rel="shortcut icon" type="image/png" href="images/logomarca.png" />
     <script src="scripts/data.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const postsContainer = document.getElementById("postsContainer");
-        posts.forEach((post) => {
-          const postSection = document.createElement("section");
-          const postTitleElement = document.createElement("h3");
-          const postImageElement = document.createElement("img");
-          const postContentElement = document.createElement("p");
-          const expandLinkElement = document.createElement("a");
-
-          postTitleElement.textContent = post.title;
-          postImageElement.src = post.imageUrl;
-          postContentElement.textContent = post.body;
-          expandLinkElement.textContent = "Expand...";
-          expandLinkElement.href = `post.html?id=${post.id}`;
-
-          expandLinkElement.addEventListener("click", (event) => {
-            event.preventDefault();
-            localStorage.setItem("postToDisplay", JSON.stringify(post));
-            window.location.href = expandLinkElement.href;
-          });
-
-          postSection.classList.add("postSection");
-          postImageElement.classList.add("postImage");
-          postContentElement.classList.add("postContent");
-          expandLinkElement.classList.add("expandLink");
-
-          postSection.appendChild(postImageElement);
-          postSection.appendChild(postTitleElement);
-          postSection.appendChild(postContentElement);
-          postSection.appendChild(expandLinkElement);
-
-          postsContainer.appendChild(postSection);
-        });
-      });
-    </script>
+    <script src="scripts/posts.js" defer></script>
   </head>
 
   <body>
     <header>
-      <img src="images/logomarca.png" alt="">
+      <a href="/index.html">
+        <img src="images/logomarca.png" alt="" />
+      </a>
       <h1>Blog</h1>
     </header>
 
@@ -58,10 +27,10 @@
 
     <template id="postTemplate">
       <section class="postSection">
-        <img class="postImage" src="" alt="">
+        <img class="postImage" src="" alt="" />
         <h3 class="postTitle"></h3>
         <p class="postContent"></p>
-        <a href="http://" class="expandLink">Expand...</a>
+        <a href="#" class="expandLink">Expand...</a>
       </section>
     </template>
   </body>
