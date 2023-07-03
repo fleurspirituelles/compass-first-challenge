@@ -1,0 +1,30 @@
+header {
+  align-items: center;
+  background: #32325d;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  gap: 10px;
+  height: 35px;
+  left: 0;
+  padding: 10px 55px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+header img {
+  flex-shrink: 0;
+  height: 25px;
+  margin-right: 8px;
+  width: 25px;
+}
