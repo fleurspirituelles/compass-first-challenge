@@ -7,6 +7,42 @@
     <title>Posts</title>
     <link rel="stylesheet" href="style.css">
     <script src="data.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const postsContainer = document.getElementById("postsContainer");
+        posts.forEach((post) => {
+          const postSection = document.createElement("section");
+          const postTitleElement = document.createElement("h3");
+          const postImageElement = document.createElement("img");
+          const postContentElement = document.createElement("p");
+          const expandLinkElement = document.createElement("a");
+
+          postTitleElement.textContent = post.title;
+          postImageElement.src = post.imageUrl;
+          postContentElement.textContent = post.body;
+          expandLinkElement.textContent = "Expand...";
+          expandLinkElement.href = `post.html?id=${post.id}`;
+
+          expandLinkElement.addEventListener("click", (event) => {
+            event.preventDefault();
+            localStorage.setItem("postToDisplay", JSON.stringify(post));
+            window.location.href = expandLinkElement.href;
+          });
+
+          postSection.classList.add("postSection");
+          postImageElement.classList.add("postImage");
+          postContentElement.classList.add("postContent");
+          expandLinkElement.classList.add("expandLink");
+
+          postSection.appendChild(postImageElement);
+          postSection.appendChild(postTitleElement);
+          postSection.appendChild(postContentElement);
+          postSection.appendChild(expandLinkElement);
+
+          postsContainer.appendChild(postSection);
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -16,7 +52,7 @@
     </header>
 
     <section>
-      <h2>User Posts</h2>
+      <h2 class="postTitle">User Posts</h2>
       <div class="row" id="postsContainer"></div>
     </section>
 
