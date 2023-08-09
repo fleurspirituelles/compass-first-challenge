@@ -1,6 +1,6 @@
 @import "global.css";
 
-.postTitle {
+.postsTitle {
   color: var(--primary-color);
   font-family: Inter;
   font-size: 36px;
