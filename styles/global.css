@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #3a4f9a;
+    --secondary-color: #32325d;
+    --tertiary-color: #575757;
+    --highlight-color: #ffffff;
+    --border-color: #050202;
+    --box-shadow-color: rgba(0, 0, 0, 0.25);
+    --comment-border-color: #cccccc;
+  }
+  
