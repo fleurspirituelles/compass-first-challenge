@@ -1,3 +1,2 @@
 node_modules/
-package*
-data.ts
+package-lock.json
